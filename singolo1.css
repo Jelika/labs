@@ -111,3 +111,124 @@ background-color: #f06c64;
 .arrow:hover {
 	transform: scale(1.2);
 }
+.services{
+   display: flex;
+   justify-content: center;
+   background-color: #f2f2f2;
+   margin:0 auto ;
+   padding:0%;
+   border-bottom: 6px solid #ffffff;
+   
+}
+.services-wrapper{
+    position: relative;
+    width: 1020px;
+    height: 495px;
+    background-color: #f2f2f2;
+    
+    }
+.services-name{
+    font-size: 30px;
+    letter-spacing: 0.01em;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+    position: absolute;
+    left: 40px;
+    top: 68px;
+}
+.services-description{
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
+    position: relative;
+    top: 112px;
+    left: 40px;
+    letter-spacing: -0.005em;
+    
+}
+.features{
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    width: 94%;
+}
+
+.upper-line{
+    top: 219px;
+    right: 31px;
+}
+
+.bottom-line{
+    top: 342px;
+    right: 30px;
+}
+.services_item{
+    display: flex;
+    width: 300px;
+    height: 87px;
+}
+.item-text{
+    
+}
+.item-text h3{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+    margin: -2px 0px 11px 2px;
+}
+
+.item-text p{
+    width: 219px;
+    height: 128px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+}
+.item-img{
+    margin-right: 20px;;
+}
+
+/* .features{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin-top: 163px;
+    margin-left: 42px;    
+}
+.item-img{
+margin-left: 0px;
+}
+.item-text{
+    width: 220px;
+    padding: 0 20px 29px 80px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+    font-size:10px;
+    
+}
+.item-text h3 {
+    font-size: 13.5pt;
+    letter-spacing: -0.018em;
+    color: #666d89;
+    margin-bottom: 2px;
+}
+.services_item{
+display: inline-block;
+} 
