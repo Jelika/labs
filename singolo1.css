@@ -201,34 +201,3 @@ background-color: #f06c64;
 .item-img{
     margin-right: 20px;;
 }
-
-/* .features{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    margin-top: 163px;
-    margin-left: 42px;    
-}
-.item-img{
-margin-left: 0px;
-}
-.item-text{
-    width: 220px;
-    padding: 0 20px 29px 80px;
-    color: #666d89;
-    font-family: "Lato";
-    font-weight: 900;
-    text-align: left;
-    font-size:10px;
-    
-}
-.item-text h3 {
-    font-size: 13.5pt;
-    letter-spacing: -0.018em;
-    color: #666d89;
-    margin-bottom: 2px;
-}
-.services_item{
-display: inline-block;
-} 
