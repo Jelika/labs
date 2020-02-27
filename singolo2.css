@@ -100,6 +100,54 @@ overflow: hidden;
     top: 50%;
     transform: translate(-50%,-50%);
 }
+.first{
+    left: 50%;
+    top: 58%;   
+}
+.second{
+    left: 45%;
+    top: 50%;
+}
+.third{
+    left: 52%;
+    top: 81%;
+}
+.fourth{
+    left: 49%;
+    top: 51%;
+}
+.fifth{
+    left: 50%;
+    top: 65%;
+}
+.sixth{
+    left: 51%;
+    top: 50%;
+}
+.seventh{
+    left: 70%;
+    top: 79%;
+}
+.eighth{
+    left: 52%;
+    top: 57%;
+}
+.ninth{
+    left: 50%;
+    top: 50%;
+}
+.tenth{
+    left: 44%;
+    top: 117%;
+}
+.eleventh{
+    left: 29%;
+    top: 17%;
+}
+.twelfth{
+    left: 51%;
+    top: 82%;
+}
 .about-us{
    display: flex;
    justify-content: center;
