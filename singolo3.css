@@ -131,6 +131,7 @@ letter-spacing: -0.002em;
     margin-right: 12px;
 }
 button{
+width: 80px;
 background-color:#5e6894;
 opacity:.8;
 border-color:#5e6894;
@@ -143,4 +144,32 @@ padding: 9px 18px;
 position: relative;
 top: 10px;
 left: 540px;
+}
+.footer-container{
+    display: flex;
+    justify-content: center;
+    background-color: #2d303a;
+    margin:0 auto ;
+    padding:0%;
+}
+.footer-wrapper{
+ width: 1020px;
+height: 76px;
+background-color: #2d303a;
+}
+.copyright-img{
+position: relative;
+top: 9px;
+left: 42px;
+}
+.social-media-footer{
+position: relative;
+top: 20px;
+left: 731px;
+}
+.social-media-footer img{
+margin-right: 2px;
+}
+.social-media-footer img:hover{
+    filter: brightness(0);
 }
