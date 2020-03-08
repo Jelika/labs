@@ -210,6 +210,8 @@ background-color: #f06c64;
     font-family: "Lato-Regular";
     font-weight: 400;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .item-img{
     margin-right: 20px;
@@ -274,6 +276,10 @@ background-color: #f06c64;
      color: #ffffff;
      border-color: #ffffff;
  }
+ .project-wrapper {
+    max-height: 621px;
+    overflow: hidden;   
+ }
  .container-imgs{
  display:grid ;
  grid-template-columns: repeat(4,1fr);
@@ -282,6 +288,7 @@ background-color: #f06c64;
  margin-top: 3px;
  margin-left: 40px;
  margin-right: 20px;
+
  }
  .box{
  max-width: 220px;
@@ -342,6 +349,7 @@ background-color: #f06c64;
      left: 51%;
      top: 82%;
  }
+ 
  .about-us{
     display: flex;
     justify-content: center;
@@ -387,6 +395,9 @@ background-color: #f06c64;
      margin:0px 13px 0px 3px;
  }
  .person-title{
+ overflow: hidden;
+ text-overflow: ellipsis;
+ width: 300px;
  font-size: 18px;
  line-height: 18px;
  color: #666d89;
@@ -560,15 +571,21 @@ left: 540px;
 height: 76px;
 background-color: #2d303a;
 }
-.copyright-img{
+.footer-wrapper p{
 position: relative;
-top: 9px;
-left: 42px;
+top: 22px;
+left: 41px;
+font-size: 12px;
+line-height: 30px;
+letter-spacing: -0.01em;
+color: #767e9e;
+font-family: "Lato-Light";
+font-weight: 300;
 }
 .social-media-footer{
-position: relative;
-top: 20px;
-left: 731px;
+position: relative; 
+top: -10px;
+left: 827px;
 }
 .social-media-footer img{
 margin-right: 2px;
