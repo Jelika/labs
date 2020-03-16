@@ -16,28 +16,30 @@
                 <ul class="navigation">
                     <li><a href="#" class="navigation__item">Home</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">Services</a></li>
+                    <li><a href="#services" class="navigation__item">Services</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">Portfolio</a></li>
+                    <li ><a href="#portfolio" class="navigation__item">Portfolio</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">About</a></li>
+                    <li><a href="#about" class="navigation__item">About</a></li>
                     <span class="navigation__dot">.</span>
-                    <li><a href="#" class="navigation__item">Contact</a></li>
+                    <li><a href="#contact" class="navigation__item">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="slider-container">
+    <section class="slider-container ">
         <div class="slider-wrapper">
-            <div class="slider-phone-img">
-				<img class="img-phone-vertical" src="assets/img/iPhone-Vertical.png" alt="">
-				<img class="img-phone-horizontal" src="assets/img/iPhone-Horizontal.png" alt="">
+            <div class="slider-phone-img active">
+                <img class="img-phone Vertical" src="assets/img/iPhone-Vertical.png" alt="">
+                <img class="black-screen vertical" src="assets/img/black screen vertical.png" alt="">
+                <img class="img-phone Horizontal" src="assets/img/iPhone-Horizontal.png" alt="">
+                <img class="black-screen horizontal" src="assets/img/black screen horizontal.png" alt="">
 				<img class="arrow-left arrow" src="assets/img/arrow-left.png" alt="">
 				<img class="arrow-right arrow" src="assets/img/arrow-right.png" alt="">
 			</div>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="services-wrapper">
             <h2 class="services-name">Our Services</h2>
             <p class="services-description">
@@ -140,7 +142,7 @@
             </div>
         </div>
             </section>
-            <section class="portfolio">
+            <section id="portfolio" class="portfolio">
                 <div class="portfolio-wrapper">
         <h2 class="portfolio-title">Portfolio</h2>
                 <p class="portfolio-text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
@@ -169,7 +171,7 @@
             </div>
             </div>
             </section>
-            <section class="about-us">
+            <section id="about" class="about-us">
                 <div class="about-us-wrapper">
                     <h2 class="about-us-title">About Us</h2>
                 <p class="about-us-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -211,21 +213,21 @@
                 </div>
                 </div>
             </section> 
-            <section class="get-a-quote">
+            <section class="get-a-quote" id="contact">
                 <div class="get-a-quote-wrapper">
                     <h2 class="get-a-quote-title">Get a Quote</h2>
                     <p class="get-a-quote-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                         <div class="form-contact-container">
                          <div class="form-container">
-                           <form class="form-input" action="" method="GET" id="form">
+                           <form class="form-input" action="" onsubmit="return false" id="form">
                            <div> <input type="text" placeholder="Name (Required)" required></div>
                            <div> <input type="email" placeholder="Email (Required)" required></div>
-                           <div> <input type="text" placeholder="Subject"></div>
-                           <div> <textarea name="" id="" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea></div>     
-                           <button type="submit" form="form" value="Submit">Submit</button>
-                        </form>
-                         </div>
+                           <div> <input type="text" id="subject" placeholder="Subject"></div>
+                           <div> <textarea name="" id="describe" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea></div>     
+                           <button id="makeSubmit" type="submit" form="form" value="Submit">Submit</button>
+                        </form>                        
+                    </div>
                          <div class="contact-information">
                              <h3 class="contact-title">Contact Information</h3>
                              <p class="contact-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
@@ -241,6 +243,18 @@
                         </div>
                         </div>
                     </section>
+                    <div id="messageBlock" class="hidden" >
+                        <div id="message">
+                            <p>The letter was sent</p>
+                            <br>
+                            <span id="subjectResult"></span>
+                            <br>
+                            <br>
+                            <span id="describeResult"></span>                    
+                            <button id="closeSubmit">OK</button>
+                            </p>
+                        </div>
+                    </div>
                     <footer class="footer-container">
                         <div class="footer-wrapper">
                             <p> © Copyright 2013</p>
@@ -252,5 +266,6 @@
                         </span>
                         </div>
                     </footer>
+                    <script src="script.js"></script>
 </body>
 </html>
