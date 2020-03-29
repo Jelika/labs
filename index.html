@@ -3,16 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>singolo</title>
 </head>
 
 <body>
+    <div class="main-container">
     <header class="header-container">
         <div class="header-wrapper">
+        <img class="burger-img" src="assets/img/Burger-menu-icon.png" alt="">
             <div class="header-logo">
                 <h1>SINGOLO<mark>*</mark></h1>
+            </div>
+            <div class="modal-window">
+                <nav class="burger-menu-wrapper">
+                 <div class="burger-navigation">
+                    <ul class="burger-navigation-list">
+                        <li><a href="#home" class="navigation__item">Home</a></li>
+                        <li><a href="#services" class="navigation__item">Services</a></li>
+                        <li><a href="#portfolio" class="navigation__item">Portfolio</a></li>
+                        <li><a href="#about" class="navigation__item">About</a></li>
+                        <li><a href="#contact" class="navigation__item">Contact</a></li>
+                    </ul>
+                </div>
+                </nav>
             </div>
             <nav class="navigation-wrapper">
                 <ul class="navigation">
@@ -30,15 +45,15 @@
         </div>
     </header>
     <section id="home" class="slider-container">
-        <div class="slide blue "><img src="assets/img/Slide-2.png" alt="" ></div>
+        <div class="slide blue "><div class="blue-wrapper"><img src="assets/img/Slide-2.png" alt="blue"></div></div>
         <div class="slide red active3">
-            <div class="slider-phone-img active">
+            <div class="slider-phone-img active">            
                 <img class="img-phone Vertical" src="assets/img/iPhone-Vertical.png" alt="">
                 <img class="black-screen vertical" src="assets/img/black screen vertical.png" alt="">
-                <img class="img-phone Horizontal" src="assets/img/iPhone-Horizontal.png" alt="">
+                    <img class="img-phone Horizontal" src="assets/img/iPhone-Horizontal.png" alt="">
                 <img class="black-screen horizontal" src="assets/img/black screen horizontal.png" alt="">
             </div>
-        </div>
+            </div>
         <img class="arrow-left arrow" src="assets/img/arrow-left.png" alt="">
         <img class="arrow-right arrow" src="assets/img/arrow-right.png" alt="">
     </section>
@@ -51,7 +66,7 @@
                 nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
                 tortor mauris condimentum nibh.
             </p>
-            <div class="features upper-line">
+            <div class="features">
                 <div class="services_item">
                     <div class="item-img">
                         <img src="assets/img/pen.png" alt="pen">
@@ -81,7 +96,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="services_item">
                     <div class="item-img">
                         <img src="assets/img/heart.png" alt="heart">
@@ -96,9 +110,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-
-            <div class="features bottom-line">
                 <div class="services_item">
                     <div class="item-img">
                         <img src="assets/img/phone.png" alt="phone">
@@ -113,7 +124,6 @@
                         </p>
                     </div>
                 </div>
-
                 <div class="services_item">
                     <div class="item-img">
                         <img src="assets/img/bubble.png" alt="bubble">
@@ -128,9 +138,6 @@
                         </p>
                     </div>
                 </div>
-
-
-
                 <div class="services_item">
                     <div class="item-img">
                         <img src="assets/img/star.png" alt="star">
@@ -185,7 +192,7 @@
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="container-people">
                 <div class="first-person">
-                    <img src="assets/img/Adam.png" alt="">
+                    <img class="avatar" src="assets/img/Adam.png" alt="">
                     <h3 class="person-title">Adam Jensen</h3>
                     <p class="person-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec
                         rutrum tellus dolor id lorem.</p>
@@ -197,7 +204,7 @@
                     </div>
                 </div>
                 <div class="second-person">
-                    <img src="assets/img/Desmond.png" alt="">
+                    <img class="avatar" src="assets/img/Desmond.png" alt="">
                     <h3 class="person-title">Desmond Miles</h3>
                     <p class="person-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet,
                         viverra lacus ut, ultrices velit.</p>
@@ -209,7 +216,7 @@
                     </div>
                 </div>
                 <div class="third-person">
-                    <img src="assets/img/Scolara.png" alt="">
+                    <img class="avatar" src="assets/img/Scolara.png" alt="">
                     <h3 class="person-title">Scolara Visari</h3>
                     <p class="person-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et
                         consequat felis. Quisque condimentum.</p>
@@ -237,7 +244,7 @@
                         <div> <input type="text" id="subject" placeholder="Subject"></div>
                         <div> <textarea name="" id="describe" cols="30" rows="10"
                                 placeholder="Describe your project in detail..."></textarea></div>
-                        <button id="makeSubmit" type="submit" form="form" value="Submit">Submit</button>
+                        <button class="make-submit" id="makeSubmit" type="submit" form="form" value="Submit">Submit</button>
                     </form>
                 </div>
                 <div class="contact-information">
@@ -270,20 +277,21 @@
             <br>
             <br>
             <span id="describeResult"></span>
-            <button id="closeSubmit">OK</button>        
+            <button class="close-button" id="closeSubmit">OK</button>        
         </div>
     </div>
     <footer class="footer-container">
         <div class="footer-wrapper">
             <p> © Copyright 2013</p>
-            <span class="social-media-footer">
+            <div class="social-media-footer">
                 <img src="assets/img/facebook.png" alt="facebook">
                 <img src="assets/img/Google.png" alt="Google">
                 <img src="assets/img/twitter.png" alt="twitter">
                 <img src="assets/img/linkedin.png" alt="linkedin">
-            </span>
+            </div>
         </div>
     </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 

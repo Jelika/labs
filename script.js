@@ -94,8 +94,8 @@ function getNextElementIndex(index, array) {
     return (index + array.length) % array.length;
 }
 
-function afterAnimationCBFactory (...classes) {
-    const cb = function() {
+function afterAnimationCBFactory(...classes) {
+    const cb = function () {
         this.classList.remove(...classes);
         this.removeEventListener('animationend', cb)
     }
@@ -106,7 +106,7 @@ function hideSlide(oldIndex, direction) {
     slides[oldIndex].addEventListener('animationend', afterAnimationCBFactory('active3', direction));
     slides[oldIndex].classList.add(direction);
     slides[oldIndex].classList.add('next');
-}   
+}
 
 function showSlide(currentIndex, direction) {
     slides[currentIndex].addEventListener('animationend', afterAnimationCBFactory(direction));
@@ -128,4 +128,46 @@ function moveSlide(direction) {
 document.querySelector('.arrow-right').addEventListener('click', () => moveSlide('left'));
 
 document.querySelector('.arrow-left').addEventListener('click', () => moveSlide('right'));
+
+const BURGERIMG = document.querySelector(".burger-img");
+const MODAL_MENU = document.querySelector(".burger-menu-wrapper");
+const MODAL_WINDOW= document.querySelector(".modal-window");
+const LOGO = document.querySelector(".burger-img");
+const SINGOLO = document.querySelector(".header-logo h1");
+
+BURGERIMG.addEventListener("click", burgerMenuClick);
+
+function burgerMenuClick() {
+    const isOpen = MODAL_MENU.parentElement.classList.contains("open");
+    const animationClass = isOpen ? 'left-gone' : 'left';
+    LOGO.style.transform = `rotate(${isOpen ? 0 : 90}deg)`;
+    SINGOLO.classList.toggle("i-died-for-that-one");
+    MODAL_MENU.addEventListener('animationend', afterAnimationCBFactory(animationClass))
+    if (!isOpen) {
+        MODAL_MENU.parentElement.classList.add('open')        
+    } else {
+        const cb = function() {
+            MODAL_MENU.parentElement.classList.remove('open');
+            this.removeEventListener('animationend', cb);
+        }
+        MODAL_MENU.addEventListener('animationend', cb);
+    }
+    MODAL_MENU.classList.add(animationClass);
+} 
+ MODAL_WINDOW.addEventListener("click", () =>{
+    LOGO.style.transform = `rotate(0deg)`;
+    SINGOLO.classList.remove("i-died-for-that-one");
+    const cb = function() {
+        MODAL_WINDOW.classList.remove('open');
+        this.classList.remove('left-gone');
+        this.removeEventListener('animationend', cb);
+    }
+    MODAL_MENU.addEventListener('animationend', cb);
+    MODAL_MENU.classList.add('left-gone');
+ }
+ ); 
+ 
+
+
+
 
