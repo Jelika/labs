@@ -737,7 +737,7 @@ mark {
 .get-a-quote-wrapper {
     width: 100%;
     max-width: 1020px;
-    height: 648px;
+    height: 660px;
     background-color: #f06c64;
 }
 
@@ -1125,6 +1125,7 @@ button {
     .first-person, .second-person, .third-person {
         max-width: 300px;
         width: 100vw;
+        margin: 0 auto;
     }
     .container-people {
         grid-template-columns: repeat(1, 1fr);
