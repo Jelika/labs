@@ -1027,7 +1027,7 @@ button {
     .first-person, .second-person, .third-person {
         max-width: 256px;
         width: 100%;
-        margin: 0 auto;
+        margin: 0;
     }
     .form-input input {
         width: 100%
@@ -1039,7 +1039,11 @@ button {
         width: 65vw;
     }
 }
-
+@media only screen and (max-width:880px) {
+    .first-person, .second-person, .third-person{
+         max-width:220px;
+    }
+}
 @media only screen and (max-width:767px) {
     .i-died-for-that-one{
         transform: translateX(-23%);
@@ -1108,9 +1112,8 @@ button {
     .portfolio-wrapper {
         height: calc(47% + 4px);
     }
-    .project-wrapper {
-        max-height: 1020px;
-    }
+    
+
     .box {
         width: 98%;
         height: 95%;
@@ -1164,7 +1167,6 @@ button {
         padding: 5vw 80vw 5vw 0vw
     }
 }
-
 @media only screen and (max-width:480px) {
     .box {
         width: 90%;
@@ -1172,6 +1174,12 @@ button {
     }
     .services-wrapper {
         max-width: 400px;
+    }
+    .container-imgs{
+        row-gap: 0px;
+    }
+    .project-wrapper {
+        max-height: 750px;
     }
     .img-phone.Vertical {
         height: 178px;
