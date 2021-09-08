@@ -30,6 +30,7 @@
     margin: 0 auto;
     overflow: hidden;
 }
+
 .header-container {
     display: flex;
     width: 100%;
@@ -653,7 +654,6 @@ mark {
 }
 
 .about-us-text {
-    height: 57px;
     font-size: 18px;
     line-height: 30px;
     word-wrap: break-word;
@@ -669,7 +669,7 @@ mark {
     width: 100%;
     max-width: 1020px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     margin: 45px 40px 0 15px;
     padding-right: 4px;
     column-gap: 20px;
@@ -901,6 +901,120 @@ img {}
     margin-right: 12px;
 }
 
+.interactive-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    align-items: start;
+}
+.interactive-wrapper div {
+    margin: initial;
+    margin-bottom: 10px;
+}
+
+audio {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 550px;
+    color: #767e9e;
+    font-family: "Lato-Light";
+}
+
+th {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+th, td {
+    border: 0.125em solid #767e9e;
+    line-height: 1.5;
+    padding: 0.75em;
+    text-align: left;
+}
+
+/* Stack rows vertically on small screens */
+
+@media (max-width: 570px) {
+    table {
+        max-width: 370px;
+    }
+    /* Hide column labels */
+    thead tr {
+        position: absolute;
+        top: -9999em;
+        left: -9999em;
+    }
+    tr {
+        border: 0.125em solid #767e9e;
+        border-bottom: 0;
+    }
+    /* Leave a space between table rows */
+    tr+tr {
+        margin-top: 1.5em;
+    }
+    /* Get table cells to act like rows */
+    tr, td {
+        display: block;
+    }
+    td {
+        border: none;
+        border-bottom: 0.125em solid #767e9e;
+        /* Leave a space for data labels */
+        padding-left: 50%;
+    }
+    /* Add data labels */
+    td:before {
+        content: attr(data-label);
+        display: inline-block;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-left: -100%;
+        width: 100%;
+    }
+}
+
+/* Stack labels vertically on smaller screens */
+
+@media (max-width: 400px) {
+    table {
+        max-width: 250px;
+    }
+    td {
+        padding-left: 0.75em;
+    }
+    td:before {
+        display: block;
+        margin-bottom: 0.75em;
+        margin-left: 0;
+    }
+}
+
+.ifelsediv {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato-Light";
+    border-radius: 15px;
+    padding:20px;
+    font-size:22px;
+    color: #767e9e;
+    margin-top: 15px;
+  }
+  .ifelsediv button {
+    width: 180px;
+    background-color: #f06c64;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
 button {
     width: 80px;
     background-color: #5e6894;
@@ -915,10 +1029,12 @@ button {
     top: 10px;
     left: 540px;
     margin: 0px;
+    cursor: pointer;
 }
 
 .close-button {
     position: relative;
+    cursor: pointer;
 }
 
 .footer-container {
@@ -1012,7 +1128,7 @@ button {
     }
     .services_item {
         height: 106px;
-    } 
+    }
     .container-imgs {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
@@ -1038,13 +1154,15 @@ button {
         width: 65vw;
     }
 }
+
 @media only screen and (max-width:880px) {
-    .first-person, .second-person, .third-person{
-         max-width:220px;
+    .first-person, .second-person, .third-person {
+        max-width: 220px;
     }
 }
+
 @media only screen and (max-width:767px) {
-    .i-died-for-that-one{
+    .i-died-for-that-one {
         transform: translateX(-23%);
         z-index: 30;
         position: relative;
@@ -1053,7 +1171,7 @@ button {
         display: block;
         z-index: 30;
     }
-    .open{
+    .open {
         display: block;
     }
     .navigation-wrapper {
@@ -1117,18 +1235,18 @@ button {
     }
     .about-us-text {
         margin: auto;
-        padding: 22px 0px 135px 40px;
+        padding: 22px 0px 35px 40px;
     }
     .first-person, .second-person, .third-person {
         max-width: 300px;
         width: 100vw;
         margin: 0 auto;
     }
-    .container-people {
+    /* .container-people {
         grid-template-columns: repeat(1, 1fr);
-    }
+    } */
     .about-us-wrapper {
-        height: calc(47% + 4px);
+        height: 100%;
     }
     .form-contact-container {
         flex-wrap: wrap;
@@ -1165,6 +1283,7 @@ button {
         padding: 5vw 80vw 5vw 0vw
     }
 }
+
 @media only screen and (max-width:480px) {
     .box {
         width: 90%;
@@ -1173,7 +1292,7 @@ button {
     .services-wrapper {
         max-width: 400px;
     }
-    .container-imgs{
+    .container-imgs {
         row-gap: 0px;
     }
     .project-wrapper {
