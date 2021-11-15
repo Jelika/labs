@@ -901,13 +901,14 @@ img {}
     margin-right: 12px;
 }
 
-.interactive-wrapper{
+.interactive-wrapper {
     display: flex;
     flex-direction: column;
     margin-left: 30px;
     margin-bottom: 30px;
     align-items: start;
 }
+
 .interactive-wrapper div {
     margin: initial;
     margin-bottom: 10px;
@@ -936,6 +937,36 @@ th, td {
     padding: 0.75em;
     text-align: left;
 }
+
+.cookies-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cookies-image-btn {
+    margin: auto;
+    margin-bottom: 20px;
+    color: white;
+    height: 100px;
+    width: 160px;
+}
+
+.cookies-image {
+    width: 300px;
+    height: 300px;
+}
+.cookies-image.active{
+    animation: fade 2s linear infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0 }
+    50% { opacity: 1 }
+    100% { opacity: 0 }
+  }
 
 /* Stack rows vertically on small screens */
 
@@ -999,12 +1030,13 @@ th, td {
     flex-direction: column;
     font-family: "Lato-Light";
     border-radius: 15px;
-    padding:20px;
-    font-size:22px;
+    padding: 20px;
+    font-size: 22px;
     color: #767e9e;
     margin-top: 15px;
-  }
-  .ifelsediv button {
+}
+
+.ifelsediv button {
     width: 180px;
     background-color: #f06c64;
     color: #fff;
@@ -1013,7 +1045,7 @@ th, td {
     font-size: 14px;
     cursor: pointer;
     margin-top: 10px;
-  }
+}
 
 button {
     width: 80px;
@@ -1258,6 +1290,20 @@ button {
     }
     .get-a-quote-wrapper {
         height: auto;
+    }
+    .get-a-quote_btns{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .form-with-radio-btns{
+        font-family: "Lato-Light";
+        color: white;
+    }
+    .num1, .num2{
+    width: 400px;
+    }
+    .calculator button {
+        width: 100px;
     }
     .form-input div {
         width: 80vw;

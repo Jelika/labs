@@ -197,23 +197,170 @@ MODAL_WINDOW.addEventListener("click", () => {
 
 function changeColor() {
   const seltheme = document.getElementById("selcolor").value;
-  const tableNode = document.querySelector('table');
+  const tableNode = document.querySelector("table");
 
   switch (seltheme) {
     case "Green":
-        tableNode.style.color = 'green';
+      tableNode.style.color = "green";
       break;
     case "Blue":
-        tableNode.style.color = 'blue';
+      tableNode.style.color = "blue";
       break;
     case "Red":
-        tableNode.style.color = 'red';
+      tableNode.style.color = "red";
       break;
     case "Purple":
-        tableNode.style.color = '#767e9e';
+      tableNode.style.color = "#767e9e";
       break;
     default:
-        tableNode.style.color = '#767e9e';
+      tableNode.style.color = "#767e9e";
       break;
   }
+}
+
+/*лаба ТИБ по кукисам*/
+function imageTimer() {
+  document.querySelector(".cookies-image").classList.add("active");
+
+  let imgs = [
+    "assets/img/Project1.png",
+    "assets/img/Project2.png",
+    "assets/img/Project3.png",
+    "assets/img/Project4.png",
+    "assets/img/Project5.png",
+  ];
+  let imgsFromCookies = [];
+  let counter = 0;
+  let jsonStr = JSON.stringify(imgs);
+  setCookie("mycookie", jsonStr);
+  let jsonStrFromCookies = getCookie("mycookie");
+  imgsFromCookies = JSON.parse(jsonStrFromCookies);
+
+  setInterval(function () {
+    document.querySelector(".cookies-image").src = imgsFromCookies[counter];
+    counter++;
+    if (counter === 4) {
+      counter = 0;
+    }
+  }, 2000);
+
+  function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "");
+  }
+
+  function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(";");
+    console.log("===", document.cookie);
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == " ") c = c.substring(1, c.length);
+
+      if (c.indexOf(nameEQ) == 0) {
+        return c.substring(nameEQ.length, c.length);
+      }
+    }
+    return null;
+  }
+}
+/*лаба ТИБ по кукисам*/
+const selfInfo = "Smirnova Anzhelika, study in BSUIR."; // string with personal information
+const birthYear = 2001; // number of birth year
+
+const monthsRuList = document.querySelector(".radio-btn_ru-list");
+const monthsEnList = document.querySelector(".radio-btn_en-list");
+
+let promptResult = "Anzhelika Smirnova";
+let confirmResult = "";
+
+
+
+function confirmCall() {
+  confirmResult = confirm("Make chose: yes/no");
+}
+const monthsRu = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+const monthsEn = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let promptResult = "";
+
+function promptCall() {
+  promptResult = prompt(
+    "Whats your name? (enter your data instead of the default data)",
+    promptResult
+  );
+}
+
+function alertCall() {
+  alert(`Lorem Ipsum is simply dummy text of th
+  e printing and typesetting industry. Lorem Ipsum has been the industry's 
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of typ
+  e and scrambled it to make a type specimen book. It has survived not only five 
+  centuries, but also the leap into electronic typesetting, remaining essentially un
+  changed. It was popularised in the 1960s with the release of Letraset sheets 
+  containing Lorem Ipsum passages, and more recently with desktop publishing software li
+  ke Aldus PageMaker including versions of Lorem Ipsum.`);
+}
+
+monthsRu.forEach((el) => {
+  const listItem = document.createElement("li");
+  listItem.innerText = el;
+  monthsRuList.append(listItem);
+});
+
+monthsEn.forEach((el) => {
+  const listItem = document.createElement("li");
+  listItem.innerText = el;
+  monthsEnList.append(listItem);
+});
+
+
+document.querySelectorAll(".track-order-change").forEach((node) => {
+  node.addEventListener("click", (e) => {
+    document.querySelectorAll(".radio-btn").forEach((elem) => {
+      elem.closest("div").querySelector("ul").style.display = "none";
+    });
+
+    e.target.closest("div").querySelector("ul").style.display = e.target
+      .closest("div")
+      .querySelector("input").checked
+      ? "none"
+      : "block";
+  });
+});
+
+let option; 
+
+// функция расчёта
+function calculator() {
+  // переменная для результата
+  let result;
+  // получаем первое и второе число
+  let num1 = Number(document.getElementById("num1").value);
+  let num2 = Number(document.getElementById("num2").value);
+  // смотрим, что было в переменной с действием, и действуем исходя из этого
+  switch (option) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+    case '++':
+      result = num1+1;
+      break;
+    case '--':
+      result = num1-1;
+      break;
+  }
+  document.getElementById("result").innerHTML = result
 }

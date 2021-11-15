@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>singolo</title>
   </head>
-
   <body>
     <div class="main-container">
       <header class="header-container">
@@ -381,10 +380,57 @@
             <p>Ваш браузер не поддерживает HTML5 аудио. Вот взамен
                 <a href="myAudio.mp4">ссылка на аудио</a></p>
        </audio></div>
+       <div class="cookies-images-wrapper">
+         <button class="cookies-image-btn" onclick="imageTimer()">click me to start slide-show</button>
+         <img class="cookies-image" src="assets/img/Project1.png">
+       </div>
            <div>
       </section>
       <section class="get-a-quote" id="contact">
         <div class="get-a-quote-wrapper">
+          <div class="get-a-quote_btns">
+            <button class="alert" onclick="alertCall()">Alert</button>
+            <button class="confirm" onclick="confirmCall()">Confirm</button>
+            <button class="prompt" onclick="promptCall()">Prompt</button>
+          </div>
+          <form name="form-with-radio-btns">
+            <div class="radio-btn_ru">
+              <label>
+                <input type="radio" name="radios" class="track-order-change" value="" checked>
+               RU
+              </label>
+              <ul class="radio-btn radio-btn_ru-list">
+              </ul>
+            </div>
+
+            <div class="radio-btn_en">
+              <label>
+                <input type="radio" name="radios" class="track-order-change" value="">
+                EN
+              </label>
+              <ul class=" radio-btn radio-btn_en-list">
+              </ul>
+            </div>
+          </form>
+          <div class="calculator">
+          <p>калькулятор</p>
+          <input id="num1" />
+          <!-- блок с кнопками -->
+	<div id="operator_btns">
+    <button id="plus" onclick="op='+'">+</button>
+    <button id="minus" onclick="op='-'">-</button>
+    <button id="times" onclick="op='*'">x</button>
+    <button id="divide" onclick="op='/'">:</button>  
+    <button id="incriment" onclick="op='++'" >++</button>
+    <button id="decriment"onclick="op='--'" >--</button>
+	</div>
+	<!-- поле ввода второго числа -->
+	<input id="num2" />
+	<br>
+	<!-- кнопка для рассчётов -->
+	<button onclick="calc()">Посчитать</button>
+  <p id="result"></p>
+          </div>
           <h2 class="get-a-quote-title">Get a Quote</h2>
           <p class="get-a-quote-text">
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
